@@ -8,16 +8,28 @@ object historia {
         feroz.pesoDisminuido()
     }  
 
+    method loboComioAAbuelita(){
+            feroz.pesoAumentado(abuelita.peso()) 
+        }
+
+    method caperucitaPierdeUnaManzana(){
+        canasta.cantidadManzanas(5)
+        return canasta.peso()
+    }
+
+    method pesoNuevoCaperucita(){
+        caperucita.pesoTotal()
+        return caperucita.pesoConCanasta()
+    }
+
     method loboComioACaperucita(){
         feroz.pesoAumentado(caperucita.pesoConCanasta()) 
     }
 
-    method loboComioAAbuelita(){
-        feroz.pesoAumentado(abuelita.peso()) 
-    }
 }
 
 object finalBueno {
+    //luego de comer a caperucita y su abuela
 
     method cazadorDisparaALobo() {
       cazador.disparar()
@@ -33,7 +45,9 @@ object finalBueno {
 }
 
 object finalMalo {
-
+    //luego de comer a caperucita y su abuela, reiniciando los valores 
+    //(quitando los valores del final bueno/reiniciando repl, volviendo a poner los del objeto historia)
+    
     method loboComioATodos() {
       feroz.pesoAumentado(cazador.peso())
     }
